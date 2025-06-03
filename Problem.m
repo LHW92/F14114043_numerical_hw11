@@ -154,7 +154,7 @@ function y = variational_method(x)
     p = @(x) 1;              
     dpdx = @(x) 0;           
     q = @(x) 2;             
-    f = @(x) (1 - x.^2).*exp(-x);  % f(x)
+    f = @(x) (1 - x.^2).*exp(-x); 
 
     y1 = a*(1 - x/l) + b*(x/l);
     F = f(x) + (b - a)/l * dpdx(x) - q(x).*y1;
